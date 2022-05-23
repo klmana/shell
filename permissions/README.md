@@ -1,3 +1,16 @@
+:TOPICS
+http://linuxcommand.org/lc3_lts0090.php
+chmod
+sudo
+su
+chown
+chgrp
+id
+groups
+whoami
+adduser
+useradd
+addgroup
 0. My name is Betty
 a script that switches the current user to the user betty.
 1. Who am I
