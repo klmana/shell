@@ -1,3 +1,2 @@
 #!/bin/bash
-tail -n +1 | cut -f -1 | sort -k 1 | uniq -c | sort -nr | rev
- 
+tail -n +1 | cut -f -1 | sort -k 1 | uniq -c | sort -nr | rev 
