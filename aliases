@@ -1,0 +1,71 @@
+Aliases for Bash
+
+Description
+
+This repo is for creating a few key shorts and improving the quality of life by speeding up the commands
+
+Installation
+
+To install the shortcuts follow these steps:
+
+Navigate to your root folder: cd ~
+Run the command: git clone https://github.com/lhack-jpeg/aliases.git
+Check to see if the folder has been copied with: ll
+Navigate into the alias folder: cd aliases
+Give the shell script permissions to run: chmod u+x copy_aliases
+Navigate back to the root folder: cd ~
+Run the following shell command: source ~/aliases/copy_aliases
+Check to see your new aliases: alias
+How to use:
+
+gia
+
+gia is short hand for git add. Used as gia [File]... to add file(s) separately or can be used as gia . to add all files
+
+gic
+
+gic is short hand for git commit -m. To use the command follow gic 'Your descriptive commit message'
+
+gip
+
+gip is shorthand for git push
+
+gwb
+
+gwb is shorthand for git branch -a. This command is meant to show which current branch you are working on
+
+gis
+
+gis is shorthand for git status. This shows the current state of which files are up-to-date, changed or untracked.
+
+gir
+
+gir is short hand for git rm. To use the command: gir rm [file]
+
+em
+
+em is shorthand for emacs. Use the command as: em [file]
+
+..
+
+.. is shorthand for cd .. This command will take you into the parent directory
+
+c
+
+c is shorthand for clear. This command will clear the current lines in the terminal
+
+mkdir
+
+This command shorthand for mkdir -pv. This used the same as mkdir and allows users to create directories and parent directories in one line with a verbose output to show what has been done
+
+gich
+
+This command is a shorthand for git checkout. This will make it faster to switch between branches as well as creating new branches by adding the -b after gich. Example; gich [branch name] to switch branch, gich -b [branch name] creates new branch.
+
+sheb
+
+This command is shorthand for echo '#!/bin/bash >'. To use the command use sheb [filename]
+
+chux
+
+This command is a shortand for chmod u+x. To use this command, use chux [filename]
