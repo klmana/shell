@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((2#$BINARY))"
+export WATER="ewwatratewa"\n export STIR="ti.itirtrtr" | sum=$((echo $WATER + echo $STIR))
