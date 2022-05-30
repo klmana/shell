@@ -1,2 +1,21 @@
 #!/usr/bin/env bash
+#h script that loops from 1 to 10 and with while
+displays bad luck for the 4th loop iteration with if
+displays good luck for the 8th loop iteration with elif
+displays Best School for the other iterations with else
+
+ADD=1
+while [ "$ADD" -le 10 ];
+do
+    if [ "$ADD" -eq 4 ];
+    then
+	echo "bad luck"
+    elif [ "$ADD" -eq 8 ];
+    then
+	echo"good luck"
+    else
+	echo "Best School"
+    fi
+    ((ADD=ADD+1))
+done
 
