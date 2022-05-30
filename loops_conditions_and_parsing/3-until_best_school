@@ -1,2 +1,10 @@
 #!/usr/bin/env bash
+#Write a Bash script that displays Best School 10 times with until
+ADD=0
+until [ "$ADD" -eq 10 ]
+do
+    echo "Best School"
+    ((ADD=ADD+1))
+done
 
+    
