@@ -12,7 +12,7 @@ do
 	echo "bad luck"
     elif [ "$ADD" -eq 8 ];
     then
-	echo"good luck"
+	echo "good luck"
     else
 	echo "Best School"
     fi
