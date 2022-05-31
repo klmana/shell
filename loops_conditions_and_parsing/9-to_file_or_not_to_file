@@ -26,7 +26,7 @@ then
 	#then display that it is not empty
 	echo "$FILE file is not empty"
     else
-	"$FILE file is empty"
+	echo "$FILE file is empty"
     fi
 
     #second loop to check the nature of the file (regular or not) if the file exists
