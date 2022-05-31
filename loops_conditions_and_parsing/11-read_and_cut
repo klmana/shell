@@ -8,9 +8,9 @@
 #Requirements:
 #You must use the while loop (for and until are forbidden)
 
-IFS= read
-do
-    while (($READ -r LINE));
+IFS=read
+while $READ -r LINE;
+      do
 	  echo "READ" | cut -d':' fi,4,7
 	  < /etc/passwd
 done
