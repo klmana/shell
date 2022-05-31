@@ -2,4 +2,17 @@
 #Write a Bash script that stops 4-to_infinity_and_beyond process.
 #Requirements:
 #You cannot use kill or killall
-pkill -9 -f "4-to_infinity_and_beyond"
+pkill -f "4-to_infinity_and_beyond"
+pkillexitstatus=$?
+
+if [ $pkillexitstatus -eq 0 ]; then
+    echo "0 One or more processes matched the criteria"
+elif [ $pkillexitstatus -eq 1 ]; then
+    echo "1 No processes matched"
+elif [ $pkillexitstatus -eq 2 ]; then
+    echo "syntax error in the command line"
+elif [ $pkillexitstatus -eq 3 ]; then
+    echo "fatal error"
+else
+    echo UNEXPECTED
+fi
