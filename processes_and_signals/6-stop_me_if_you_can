@@ -3,5 +3,6 @@
 #Requirements:
 #You cannot use kill or killall
 
-ps -ef | pgrep -i 4-to_infinity_and_beyond
+pkill 4-to_infinity_and_beyond | echo $?
+
 
