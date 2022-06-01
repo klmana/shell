@@ -8,7 +8,7 @@
 #In a list format
 
 #for all the integer betwen 1-100
-for i in $(seq 1 100);
+for i in {1..100}
 do
     #if the integer when divided by 15 3 and 5 then the modulo is 0 
     if [ $((i % 15)) -eq 0 ];
