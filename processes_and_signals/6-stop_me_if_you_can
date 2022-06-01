@@ -3,5 +3,5 @@
 #Requirements:
 #You cannot use kill or killall
 
-ps -ef|pgrep -i 4-to_infinity_and_beyond
+ps -ef | pgrep -i 4-to_infinity_and_beyond
 
