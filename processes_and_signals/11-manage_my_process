@@ -35,7 +35,7 @@
 #if there is the word start in the command line
 if [ "$1" == "start" ]
 then
-    touch /var/run/my_process.pid &
+   # touch /var/run/my_process.pid &
     ./manage_my_process &
     echo $$ > /var/run/my_process.pid &
     echo "manage_my_process started"
@@ -52,10 +52,9 @@ elif
 then
     echo "manage_my_process restarted"
     pkill -9 -f ./manage_my_process &&
-    sudo rm /var/run/my_process.pid &&
-    touch /var/run/my_process.pid &&
-    ./manage_my_process &&
-    echo $$ > /var/run/my_process.pid &
+    sudo rm /var/run/my_process.pid
+    ./manage_my_process &
+    echo $$ > /var/run/my_process.pid
 else
     # if there is not any of these 3 words start or stop or restart in the command line
     echo "Usage: manage_my_process {start|stop|restart}"
