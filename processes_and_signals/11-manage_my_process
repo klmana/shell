@@ -32,27 +32,31 @@
 #Displays Usage: manage_my_process {start|stop|restart} if any other argument or no argument is passed
 #Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case wherr we check if a process is already running when doing ./11-manage_my_process start, in our case it will simply create a new process instead of saying that it is already started
 
+#if there is the word start in the command line
 if [ "$1" == "start" ]
 then
-    ./manage_my_process
-    touch  /var/run/my_process.pid
-    echo "$" >  /var/run/my_process.pid
+    touch /var/run/my_process.pid &
+    ./manage_my_process &
+    echo $$ > /var/run/my_process.pid &
     echo "manage_my_process started"
 elif
+    #if there is the word stop in the command line
     [ "$1" == "stop" ]
 then
-    echo "manage_my_process stopped"
-    kill "$(cat /var/run/my_process.pid)"
+    echo "manage_my_process stopped" &
+    pkill -9 -f ./manage_my_process &
     rm /var/run/my_process.pid
 elif
+    #if there is the word restart in the command line
     [ "$1" == "restart" ]
 then
-    kill "$(cat /var/run/my_process.pid)"
-    rm /var/run/my_process.pid
-    ./manage_my_process &
-    touch  /var/run/my_process.pid
-    echo "$" > /var/run/my_process.pid
-    echo "manage_my_process started"
+    echo "manage_my_process restarted"
+    pkill -9 -f ./manage_my_process &
+    rm /var/run/my_process.pid &&
+    touch /var/run/my_process.pid &&
+    ./manage_my_process &&
+    echo $$ > /var/run/my_process.pid &
 else
+    # if there is not any of these 3 words start or stop or restart in the command line
     echo "Usage: manage_my_process {start|stop|restart}"
     fi
