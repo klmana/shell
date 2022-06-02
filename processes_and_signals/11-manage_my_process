@@ -32,20 +32,20 @@
 #Displays Usage: manage_my_process {start|stop|restart} if any other argument or no argument is passed
 #Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case wherr we check if a process is already running when doing ./11-manage_my_process start, in our case it will simply create a new process instead of saying that it is already started
 
-if [ "${1}" == "start" ]
+if [ "$1" == "start" ]
 then
     ./manage_my_process
     touch  /var/run/my_process.pid
     echo "$" >  /var/run/my_process.pid
     echo "manage_my_process started"
 elif
-    [ "${1}" == "stop" ]
+    [ "$1" == "stop" ]
 then
     echo "manage_my_process stopped"
     kill "$(cat /var/run/my_process.pid)"
     rm /var/run/my_process.pid
 elif
-    [ "${1}" == "restart" ]
+    [ "$1" == "restart" ]
 then
     kill "$(cat /var/run/my_process.pid)"
     rm /var/run/my_process.pid
