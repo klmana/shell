@@ -51,7 +51,7 @@ elif
     [ "$1" == "restart" ]
 then
     echo "manage_my_process restarted"
-    pkill -9 -f ./manage_my_process &
+    pkill -9 -f ./manage_my_process &&
     rm /var/run/my_process.pid &&
     touch /var/run/my_process.pid &&
     ./manage_my_process &&
