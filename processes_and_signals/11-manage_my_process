@@ -43,8 +43,8 @@ elif
     #if there is the word stop in the command line
     [ "$1" == "stop" ]
 then
-    echo "manage_my_process stopped" &
-    pkill -9 -f ./manage_my_process &
+    echo "manage_my_process stopped" &&
+    pkill -9 -f ./manage_my_process &&
     rm /var/run/my_process.pid
 elif
     #if there is the word restart in the command line
