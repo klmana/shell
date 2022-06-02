@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#Write a manage_my_process Bash script that:
+#Indefinitely writes I am alive! to the file /tmp/my_process
+#In between every I am alive! message, the program should pause for 2 seconds
+#infinite loop
+while true
+do
+    #execute a program that will write "I am alive" to the file tmp/my_process
+    sudo bash -c 'echo "I am alive!" >> /tmp/my_process'
+    #adds a 2 seconds pause between each line
+    sleep 2
+done
+
